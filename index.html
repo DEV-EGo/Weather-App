@@ -1,39 +1,50 @@
 <!DOCTYPE html>
 <html class="no-js">
-    <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>weather App</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title> weather </title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./CSS/style.css">
-    </head>
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <!-- bootstrap -->
 
-    <body>
+    <!-- my css -->
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <!-- my css -->
+  </head>
 
-        <div class="location">
-            <h1 class="location-timezone">timezone</h1>
+  <body>
+    <div class="container my-5">
+      <h1 class="text-center title">Weather in</h1>
+      <form class="search-location">
+        <input
+          type="text"
+          name="city"
+          placeholder="what city"
+          autocomplete="off"
+          class="form-control text-muted form-rounded p-4 shadow-sm"
+        />
+      </form>
 
-            <p>icon</p>
-
+      <div class="card rounded my-3 shadow lg back-card">
+        <div class="card-top text-center">
+          <div class="city-name my-3">
+            <p>Abuja</p>
+            <span>...</span>
+          </div>
+          <img src="" alt="" />
         </div>
+      </div>
+    </div>
 
-
-        <div class="temperature">
-            <div class="degree-section">
-                <h2 class="temperature-degree">34</h2>
-                <span>F</span>
-            </div>
-
-            <div class="temperature-description">
-                its cold
-            </div>
-        </div>
-
-
-        <script src="./Javascript/manifest.js"></script>
-    </body>
-
+    <script src="./Javascript/manifest.js"></script>
+  </body>
 </html>
