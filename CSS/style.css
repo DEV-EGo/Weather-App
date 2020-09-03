@@ -40,5 +40,33 @@ body {
   font-size: 35pt;
   font-family: "Times New Roman", Times, serif;
   position: relative;
-  top: 60px;
+  top: -60px;
+}
+
+.temp span {
+  font-weight: 100;
+  font-size: 5em;
+  letter-spacing: -5px;
+  white-space: nowrap;
+}
+
+.card-mid {
+  line-height: 0.5;
+}
+
+.condition {
+  line-height: 1em;
+  font-weight: 700;
+  font-size: 1em;
+  text-transform: capitalize;
+}
+
+.high::before {
+  content: "";
+  background: url("/img/up.png") no-repeat;
+  width: 10px;
+  height: 15px;
+  display: inline-block;
+  position: relative;
+  top: 3px;
 }
