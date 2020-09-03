@@ -24,3 +24,21 @@ body {
 .back-card {
   border-radius: 40px;
 }
+
+.city-name {
+  position: absolute;
+  width: 100%;
+}
+
+.city-name p {
+  font-size: 16pt;
+  font-weight: 400;
+}
+
+.city-name span {
+  font-weight: 400;
+  font-size: 35pt;
+  font-family: "Times New Roman", Times, serif;
+  position: relative;
+  top: 60px;
+}
