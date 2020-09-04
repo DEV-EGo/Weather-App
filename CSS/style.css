@@ -80,3 +80,28 @@ body {
   position: relative;
   top: 3px;
 }
+
+.icon-container {
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  background: #202020;
+}
+
+.icon-container img {
+  margin: auto;
+}
+
+.card-bottom {
+  line-height: 0.5;
+}
+
+.card-bottom span {
+  font-size: 12px;
+}
+
+.card-bottom {
+  font-size: 50px;
+  font-weight: 100;
+  letter-spacing: -5px;
+}
