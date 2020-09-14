@@ -6,4 +6,13 @@ searchForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const citySearched = cityValue.value.trim();
   console.log(citySearched);
+  searchForm.reset();
+
+  requestCity(citySearched)
+    .then((data) => {
+      updateWeatherApp(data);
+    })
+    .catch(() => {
+      console.log(error);
+    });
 });
