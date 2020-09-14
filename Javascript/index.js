@@ -4,6 +4,6 @@ const cityValue = document.querySelector(".search-location input");
 // add event listener to the form
 searchForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  const citySearched = cityValue.Value.trim();
+  const citySearched = cityValue.value.trim();
   console.log(citySearched);
 });
