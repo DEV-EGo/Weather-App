@@ -1,16 +1,29 @@
+const { truncate } = require("fs");
+
 const searchForm = document.querySelector(".search-location");
 const cityValue = document.querySelector(".search-location input");
 const cityName = document.querySelector(".city-name p");
 const cardBody = document.querySelector(".card-body");
 
+// displays weather degrees on front end
 const spitOutCelcius = (kelvin) => {
   celcius = Math.round(kelvin - 273.15);
   return celcius;
 };
 
+const isDayTime = () => {
+  if (icon.includes("d")) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
 // update front end (city name & weather)
 updateWeatherApp = (city) => {
   console.log(city);
+  const imageName = city.weather[0].icon;
+  const IconSrc = `http://openweathermap.org/img/wn/${imageName}@2x.png`;
   cityName.textContent = city.name;
 
   // innerHTML will equal the template string from html file
@@ -30,7 +43,7 @@ updateWeatherApp = (city) => {
 </div>
 
 <div class="icon-container card shadow mx-auto">
-  <img src="img/cloud.png" alt="" />
+  <img src="${IconSrc}" alt="" />
 </div>
 
 <div class="card-button px-5 py-4 row">
@@ -43,6 +56,12 @@ updateWeatherApp = (city) => {
     <p>${city.main.humidity}</p>
     <span>Humidity</span>
   </div>`;
+
+  if (isDayTime(imageName)) {
+    console.log("day");
+  } else {
+    console.log("night");
+  }
 };
 
 // add event listener to the form
