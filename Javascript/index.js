@@ -2,11 +2,19 @@ const searchForm = document.querySelector(".search-location");
 const cityValue = document.querySelector(".search-location input");
 const cityName = document.querySelector(".city-name p");
 const cardBody = document.querySelector(".card-body");
-
+const timeImage = document.querySelector(".card-top img");
 // displays weather degrees on front end
 const spitOutCelcius = (kelvin) => {
   celcius = Math.round(kelvin - 273.15);
   return celcius;
+};
+
+const isDayTime = (icon) => {
+  if (icon.includes("d")) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 // update front end (city name & weather)
@@ -46,6 +54,24 @@ updateWeatherApp = (city) => {
     <p>${city.main.humidity}</p>
     <span>Humidity</span>
   </div>`;
+
+  if (isDayTime(imageName)) {
+    console.log("day");
+    timeImage.setAttribute("src", "img/day.png");
+    if (cityName.classList.contains("text-white")) {
+      cityName.classList.remove("text-white");
+    } else {
+      cityName.classList.add("text-black");
+    }
+  } else {
+    console.log("night");
+    timeImage.setAttribute("src", "img/night.png");
+    if (cityName.classList.contains("text-black")) {
+      cityName.classList.remove("text-black");
+    } else {
+      cityName.classList.add("text-white");
+    }
+  }
 };
 
 // add event listener to the form
